@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Tét</h1>
+
+    <script>
+        const headers = {
+            'Accept': 'application/json'
+        };
+
+        fetch('AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b&app_name=EXAMPLEAPP',
+            {
+                method: 'GET',
+
+                headers: headers
+            })
+            .then(function (res) {
+                return res.json();
+            }).then(function (body) {
+                console.log(body);
+            });
+    </script>
+</body>
+
+</html>
